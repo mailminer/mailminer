@@ -308,7 +308,7 @@ input[type="checkbox"]:checked + label span {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003308}}
     .formTable .form .modal-text {
       font-size: 2em;
-      padding: 2em 0 2em 1em;
+      padding: 1em;
       text-align: center; }
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003314}}
     .formTable .form .textarea {
@@ -344,5 +344,48 @@ input[type="checkbox"]:checked + label span {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003349}}
     .formTable .form .input-form {
       position: relative; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003355}}
+.input-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003360}}
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003366}}
+.textarea {
+  height: 80%;
+  box-sizing: border-box; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003371}}
+body > div.formTable > div.form > button {
+  position: absolute;
+  left: 100%;
+  margin-left: -40px; }
+
+@media (max-height: 500px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003378}}
+  .modal-text {
+    padding: 5px 0 !important; } }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003383}}
+.textareaDiv {
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
