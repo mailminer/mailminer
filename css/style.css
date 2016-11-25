@@ -1,0 +1,348 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000316}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000337}}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000341}}
+body {
+  line-height: 1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000344}}
+ol, ul {
+  list-style: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000347}}
+blockquote, q {
+  quotes: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000350}}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000355}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000363}}
+body * {
+  outline: none !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000367}}
+p, div, a, button {
+  font-family: 'Cabin', sans-serif; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000371}}
+input[type="checkbox"] {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000374}}
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: 0.6em;
+  vertical-align: middle;
+  cursor: pointer;
+  background-size: 0.7em !important;
+  border-radius: 5px;
+  background: #1abdde; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000385}}
+input[type="checkbox"]:checked + label span {
+  background: #1abdde url(../img/icons/check.svg) center center no-repeat; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000389}}
+#sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #3b4971;
+  color: white;
+  text-transform: uppercase;
+  display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\0000397}}
+  #sidebar .nav-logo-div {
+    padding: 2.5em 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003102}}
+    #sidebar .nav-logo-div .nav-logo-img {
+      height: 5em;
+      width: 10em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003108}}
+  #sidebar #nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003114}}
+    #sidebar #nav .nav-btn-div {
+      font-size: 1.2em;
+      padding: 0.5em 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003118}}
+      #sidebar #nav .nav-btn-div a {
+        cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003122}}
+      #sidebar #nav .nav-btn-div .nav-inner {
+        display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003127}}
+    #sidebar #nav .p-g-inner {
+      text-transform: none;
+      padding: 0.4em 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003134}}
+.main-scr {
+  height: 100vh;
+  width: 79%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  vertical-align: top; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003141}}
+  .main-scr *::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003146}}
+  .main-scr #tableDiv {
+    display: none;
+    margin: 0 4em;
+    overflow-x: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003151}}
+    .main-scr #tableDiv #tableHeader {
+      border-top: 1px solid #d7d6da;
+      border-bottom: 1px solid #d7d6da;
+      padding: 1em 0;
+      margin-bottom: 1.2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003157}}
+      .main-scr #tableDiv #tableHeader p {
+        display: inline-block;
+        padding-right: 4em;
+        padding-left: 1em;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        color: #d7d6da; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003166}}
+      .main-scr #tableDiv #tableHeader a {
+        cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003169}}
+        .main-scr #tableDiv #tableHeader a img {
+          float: right;
+          margin-right: 1em;
+          width: 1.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003177}}
+    .main-scr #tableDiv #table {
+      font-size: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003180}}
+      .main-scr #tableDiv #table tr > td {
+        padding: 0.3em 1.2em;
+        font-size: 1.2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003185}}
+      .main-scr #tableDiv #table tr:nth-child(2n+1) {
+        background-color: #f7f6fb; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003191}}
+  .main-scr .main-scr-header {
+    padding: 2.5em 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003194}}
+    .main-scr .main-scr-header .main-scr-header-p {
+      display: inline-block;
+      font-size: 2em;
+      line-height: 2.5em;
+      padding: 0 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003201}}
+    .main-scr .main-scr-header .main-scr-header-copy-btn {
+      font-size: 1.2em;
+      padding: 0.5em 1.3em;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      background: #d7d6da;
+      vertical-align: top;
+      box-shadow: 1px 1px 5px #888888;
+      margin-top: 0.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003213}}
+    .main-scr .main-scr-header .active-copy-btn:hover {
+      background-color: #2A8AA6 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003217}}
+    .main-scr .main-scr-header .main-scr-header-add-btn {
+      background: white;
+      border-radius: 5px;
+      border: 1px solid #d7d6da;
+      vertical-align: top;
+      margin-left: 1em;
+      box-shadow: 1px 1px 5px #888888;
+      cursor: pointer;
+      margin-top: 0.75em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003228}}
+    .main-scr .main-scr-header .main-scr-header-add-btn-img {
+      width: 2em;
+      padding: 0.11em;
+      margin: 3px 0 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003235}}
+  .main-scr .main-scr-home {
+    margin: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003238}}
+    .main-scr .main-scr-home .main-scr-home-center {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003243}}
+      .main-scr .main-scr-home .main-scr-home-center .main-scr-home-egg-img {
+        width: 20em;
+        margin-bottom: 2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003248}}
+      .main-scr .main-scr-home .main-scr-home-center .main-scr-home-instruction-p {
+        color: #858397;
+        line-height: 1.5em;
+        font-size: 1.2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003254}}
+      .main-scr .main-scr-home .main-scr-home-center .main-scr-home-add-domain-btn {
+        background-color: #1abdde;
+        color: white;
+        padding: 0.7em 1.8em;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1.5em;
+        box-shadow: 1px 1px 5px #888888;
+        cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003266}}
+      .main-scr .main-scr-home .main-scr-home-center .main-scr-home-add-domain-btn:hover {
+        background-color: #2A8AA6; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003273}}
+.formTable {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(59, 73, 113, 0.8); }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003283}}
+  .formTable .close-modal-div {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003290}}
+  .formTable .form {
+    background-color: white;
+    width: 40%;
+    height: 80%;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003298}}
+    .formTable .form .close-modal-btn {
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+      float: right;
+      padding: 0.5em 0.7em;
+      font-size: 1.2em;
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003308}}
+    .formTable .form .modal-text {
+      font-size: 2em;
+      padding: 2em 0 2em 1em;
+      text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003314}}
+    .formTable .form .textarea {
+      border-radius: 5px;
+      resize: none;
+      background-color: #f7f6f8;
+      width: 70%;
+      margin: auto;
+      display: inline-block;
+      padding: 15px 0 0 20px;
+      font-size: 2em;
+      line-height: 1.5em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003327}}
+    .formTable .form .submitButton {
+      background-color: #1abdde;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px #888888;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      width: 74%;
+      line-height: 1.7em;
+      cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003340}}
+    .formTable .form .textarea-placeholder {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      font-size: 1.2em;
+      color: gray;
+      margin-left: -100px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/LP\/email\%20hunter\/ver0\.6\/css\/style\.scss}line{font-family:\00003349}}
+    .formTable .form .input-form {
+      position: relative; }
+
+/*# sourceMappingURL=style.css.map */

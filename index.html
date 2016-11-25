@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Email hunter</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,600,700" rel="stylesheet">
+        <script src="js/EmailHunterScripts.js"></script>
+        <script src="js/clipboard.js"></script>
+    	<!-- <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script> -->
+    </head>
+
+    <body>
+ 		<div class="formTable">
+ 			<div class="close-modal-div"></div>
+		    <div class="form">
+		    	<button class="close-modal-btn" onclick="closeModal()">X</button>
+		    	<p class="modal-text">Add Domains to get e-mails</p>
+			    <form class="input-form">
+			    	<div class="textareaDiv">
+					<textarea class="textarea" type="text" name="value" placeholder=""></textarea>
+					<button type="submit" id="submit" class="submitButton">Search Emails</button>
+					<div class="textarea-placeholder">Paste your domains here <br> by using Ctrl+V</div>
+					</div>
+				</form>
+			</div>
+		</div>    	
+
+    	<div class="container">
+	    	<div id="sidebar">
+	    		<div class="nav-logo-div">
+	    			<img class="nav-logo-img" src="img/icons/mailminer.svg">
+	    		</div>
+	    		<div id="nav">
+	    			<div class="nav-center">
+			    		<div class="nav-btn-div">
+			    			<a class="sidebar-a p-g">personal/generic</a>
+			    			<ul class="nav-inner p-g-inner">
+			    				<li>
+			    					<a>
+				    					<input type="checkbox" id="c1" name="cc" />
+										<label for="c1">
+											<span></span>
+										Personal
+										</label>
+									</a>
+								</li>
+	            				<li>
+	            					<a>
+				    					<input type="checkbox" id="c2" name="cc" />
+										<label for="c2">
+											<span></span>
+										General
+										</label>
+									</a>
+								</li>
+	            			</ul>
+	            		</div>
+			    		<div class="nav-btn-div">
+			    			<a>filters</a>
+			    			<input  class="nav-inner" placeholder="library@gmail.com">
+			    		</div>
+			    		<div class="nav-btn-div">
+			    			<a>looking for</a>
+							<input  class="nav-inner" placeholder="marketing@gmail.com">
+						</div>
+			    		<div class="nav-btn-div">
+			    			<a>export/import</a>
+							<a class="nav-inner" >export to google spreadsheets</a>
+		            		<a class="nav-inner" >import .csv</a>
+		            	</div>
+	            		<div class="nav-btn-div">
+	            			<a>personal api key</a>
+							<input  class="nav-inner" placeholder="your api key">
+						</div>
+			    		<div class="nav-btn-div">
+			    			<a>instructions</a>
+			    		</div>
+		    		</div>
+	    		</div>
+	    	</div>
+
+	    	<div class="main-scr">
+	    		<div class="main-scr-header">
+	    			<p class="main-scr-header-p">E-mails</p>
+	    			<button class="main-scr-header-copy-btn" id="copyAllButton">COPY ALL</button>
+	    			<button class="main-scr-header-add-btn add-new-domain-btn" onclick="addNewDomain()"><img class="main-scr-header-add-btn-img" src="img/icons/add.svg"></button>
+	    		</div>
+
+	    		<div class="main-scr-home">
+	    			<div class="main-scr-home-center">
+	    				<img class="main-scr-home-egg-img" src="img/icons/Eggy.svg">
+	    				<p class="main-scr-home-instruction-p">1. First, Add Domains via "+"</p>
+	    				<p class="main-scr-home-instruction-p">2. Choose some filters from left sidebar</p>
+	    				<p class="main-scr-home-instruction-p">3. Copy data by submitting "Copy All"</p>
+	    				<button class="main-scr-home-add-domain-btn add-new-domain-btn" onclick="addNewDomain()"><img class="main-scr-home-add-domain-btn-img" src=""> ADD DOMAIN </button>
+	    			</div>
+	    		</div>
+
+				<div id="tableDiv">
+					<table id="table"></table>
+				</div>
+		    </div>
+		</div>
+			
+		<script>
+    		$(window).on('load', function(){
+			    var form = document.querySelector("form");
+			    form.addEventListener("submit", function(event) {
+
+			    	if (errorMessageSelectType == true) {
+			    		alert("plese select at least one type of Emails (personal or generic)");
+			    	}
+			    	else {
+
+					  	event.preventDefault();
+					  	domainNameMass = [];
+
+					  	// ------------- css -----------------------//
+					  	$(".main-scr-home").css("display","none");
+					  	$("#tableDiv").css("display","block");
+					  	$("#copyAllButton").css({
+					  		"background-color" : "rgb(26,189,222)",
+					  		"cursor" : "pointer"
+					  	});
+					  	$("#copyAllButton").addClass("active-copy-btn");
+					  	// ------------- end css--------------------//
+
+					  	closeModal();
+
+					  	document.getElementById("tableDiv").innerHTML = "";
+					  	var tableDiv = document.getElementById("tableDiv");
+					  	tableDiv.id = 'tableDiv';
+					  	var tableHeader = document.createElement("div");
+						tableDiv.appendChild(tableHeader);
+						tableHeader.id = "tableHeader";
+						document.getElementById("tableHeader").innerHTML = "<p>Domain</p><p>E-mails</p><a class='tableToNewWindow' onclick='newTab()'><img src='img/icons/expand.svg'></a>"; //data-clipboard-target='#table'  href='./table.html' target='_blank'
+					  	var tableDivInner = document.createElement("div");
+					  	tableDiv.appendChild(tableDivInner);
+					  	var tableT = document.createElement("table");
+					  	tableDivInner.appendChild(tableT);
+					  	tableT.id = 'table';
+					  	var inputDomain = form.elements.value.value.split("\n");
+					  	document.getElementById("table").innerHTML = " ";
+
+					  	for (var countInputDom in inputDomain){
+					  		domainNameMass.push(inputDomain[countInputDom]);
+					    }
+					    start();
+					}
+			  	});
+			});
+		</script>
+
+		<script>
+		    var clipboard = new Clipboard('#copyAllButton');
+		    new Clipboard('.tableToNewWindow');
+		    clipboard.on('success', function(e) {
+		        console.log(e);
+		    });
+		    clipboard.on('error', function(e) {
+		        console.log(e);
+		    });
+
+			function addNewDomain() {
+				$(".formTable").css("display","flex");
+			};
+
+			function closeModal() {
+				$(".formTable").css("display","none");
+			}
+
+			$(".close-modal-div").click(function() {
+			  closeModal();
+			});
+
+			$(".textarea").click(function() {
+				$(".textarea-placeholder").css("display","none");
+			});
+
+			$('#copyAllButton').attr("data-clipboard-target","#table");
+
+
+			//------------------------ show & hide personal\generic checkbox----------------//
+			var checkboxShow;
+			$(".p-g").click(function() {
+				if (checkboxShow == 'hide' || checkboxShow == undefined) {
+					$(".p-g-inner").css("display","block");
+					checkboxShow = 'show';
+				}
+				else {
+					$(".p-g-inner").css("display","none");
+					checkboxShow = 'hide';
+				}
+			});
+			//------------------------ show & hide personal\generic checkbox----------------//
+
+			$("#c1").click(function() {
+				mailTypeGenerate();
+			});
+
+			$("#c2").click(function() {
+				mailTypeGenerate();
+			});
+
+
+			function mailTypeGenerate(){
+				if ($("#c1").is(':checked') == true && $("#c2").is(':checked') == true) {
+					mailType = '';
+					errorMessageSelectType = false;
+				}				
+				else if ($("#c1").is(':checked') == true && $("#c2").is(':checked') == false) {
+					type = 'personal';
+					mailType = '&type=' + type;
+					errorMessageSelectType = false;
+				}
+				else if ($("#c1").is(':checked') == false && $("#c2").is(':checked') == true) {
+					type = 'generic';
+					mailType = '&type=' + type;
+					errorMessageSelectType = false;
+				}
+				else {
+					errorMessageSelectType = true;
+				}
+			}
+
+			function newTab() {
+			    // var orgTable = document.getElementById("table");
+			    // var duplicatedTable = window.open('./table.html','_blank');
+			    // duplicatedTable.document.write("<div class='nya'>123</div>");
+			    //var newWin = window.open("./table.html", "hello");
+
+				var wi = window.open();
+				var html = $('#tableDiv').html();
+				$(wi.document.body).html(html);
+				$(wi.document.head).append('<link href="https://fonts.googleapis.com/css?family=Cabin:400,600,700" rel="stylesheet">');
+				$(wi.document.head).append('<title>Full table</title>');
+				$(wi.document.body).contents().find('#table').css({
+					"font-size" : "1em",
+					"font-family" : "'Cabin', sans-serif",
+					"border-collapse" : "collapse",
+					"border-spacing" : "0"
+				});
+				$(wi.document.body).contents().find('tr:nth-child(2n+1)').css("background-color", "rgb(247,246,251)");
+				$(wi.document.body).contents().find('td').css({
+					'padding' : '0.3em 1.2em',
+					'font-size' : '1.2em'
+				});
+				// $(wi.document.body).contents().find('#tableHeader').css({
+				// 	"border-top" : "1px solid rgb(215,214,218)",
+				// 	"border-bottom" : "1px solid rgb(215,214,218)",
+				// 	"padding" : "1em 0",
+				// 	"margin-bottom" : "1.2em"
+				// });
+				$(wi.document.body).contents().find('p').css({
+					"display" : "inline-block",
+					"padding-right" : "4em",
+					"padding-left" : "1em",
+					"font-size" : "1.4em",
+					"text-transform" : "uppercase",
+					"color" : "rgb(215,214,218)"
+				});
+			}
+	    </script>
+    </body>
+</html>

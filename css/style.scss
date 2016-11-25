@@ -1,0 +1,353 @@
+$light-blue: rgb(26,189,222);
+$light-blue-hov: #2A8AA6;
+$dark-blue: rgb(59,73,113);
+$white: rgb(255, 255, 255);
+$gray: rgb(215,214,218);
+$dark-gray: rgb(133,131,151);
+$gradien-purple: rba(97,67,113);
+$mask: rgba(62,61,80,90);
+$modal-inside: rgb(247, 246, 248);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+// end-css-reset --------------------------------------------//
+
+
+
+body * {
+	outline: none!important;
+}
+
+p, div, a, button {
+	font-family: 'Cabin', sans-serif;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin: 0.6em;
+    vertical-align:middle;
+    cursor:pointer;
+	background-size: 0.7em!important;
+	border-radius: 5px;
+	background: #1abdde;
+}
+input[type="checkbox"]:checked + label span {
+    background: $light-blue url(../img/icons/check.svg) center center no-repeat;
+}
+
+#sidebar {
+	width: 20%;
+	height: 100vh;
+	background-color: $dark-blue;
+	color: $white;
+	text-transform: uppercase;
+	display: inline-block;
+
+	.nav-logo-div {
+		padding: 2.5em 0;
+		display: flex;
+		justify-content: center; 
+
+		.nav-logo-img {
+			height: 5em;
+			width: 10em;
+		}
+	}
+
+	#nav {
+		display: flex;
+		justify-content: center; 
+		flex-direction: column;
+		align-items: center;
+
+		.nav-btn-div {
+			font-size: 1.2em;
+			padding: 0.5em 0;
+
+			a {
+				cursor: pointer;
+			}
+
+			.nav-inner {
+				display: none;
+			}
+		}
+
+		.p-g-inner {
+			text-transform: none;
+			padding: 0.4em 0;
+		}
+	}
+}
+
+.main-scr {
+	height: 100vh;
+	width: 79%;
+	display: inline-flex;
+	flex-direction: column;
+	vertical-align: top;
+
+	*::-webkit-scrollbar { 
+	    display: none!important; 
+	    width: 0!important;
+	}
+
+	#tableDiv {
+		display: none;
+		margin: 0 4em;
+		overflow-x: hidden;
+
+		#tableHeader {
+			border-top: 1px solid $gray;
+			border-bottom: 1px solid $gray;
+			padding: 1em 0;
+			margin-bottom: 1.2em;
+
+			p {
+				display: inline-block;
+				padding-right: 4em;
+				padding-left: 1em;
+				font-size: 1.4em;
+				text-transform: uppercase;
+				color: $gray;
+			}
+
+			a {
+				cursor: pointer;
+
+				img {
+					float: right;
+					margin-right: 1em;
+					width: 1.5em;
+				}
+			}
+		}
+
+		#table {
+			font-size: 1em;
+
+			tr > td {
+				padding: 0.3em 1.2em;
+				font-size: 1.2em;
+			}
+
+			tr:nth-child(2n+1) {
+				background-color: rgb(247,246,251);
+			}
+		}
+	}
+
+	.main-scr-header {
+		padding: 2.5em 0;
+
+		.main-scr-header-p {
+			display: inline-block;
+			font-size: 2em; 
+			line-height: 2.5em;
+			padding: 0 2em;
+		}
+
+		.main-scr-header-copy-btn {
+			font-size: 1.2em;
+			padding: 0.5em 1.3em;
+			color: $white;
+			border: none;
+			border-radius: 5px;
+			background: $gray;
+			vertical-align: top;
+  			box-shadow: 1px 1px 5px #888888;
+  			margin-top: 0.5em;
+		}
+
+		.active-copy-btn:hover {
+			background-color: $light-blue-hov!important;
+		}
+
+		.main-scr-header-add-btn {
+			background: white;
+			border-radius: 5px;
+			border: 1px solid $gray;
+			vertical-align: top;
+			margin-left: 1em;
+			box-shadow: 1px 1px 5px #888888;
+			cursor: pointer;
+			margin-top: 0.75em;
+		}
+
+		.main-scr-header-add-btn-img {
+			width: 2em;
+			padding: 0.11em;
+			margin: 3px 0 2px
+		}
+	}
+
+	.main-scr-home{
+		margin: auto;
+
+		.main-scr-home-center {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			.main-scr-home-egg-img {
+				width: 20em;
+				margin-bottom: 2em;
+			}
+
+			.main-scr-home-instruction-p {
+				color: $dark-gray;
+				line-height: 1.5em;
+				font-size: 1.2em;
+			}
+
+			.main-scr-home-add-domain-btn {
+				background-color: $light-blue;
+				color: $white;
+				padding: 0.7em 1.8em;
+				font-size: 1.2em;
+				border: none;
+				border-radius: 5px;
+				margin-top: 1.5em;
+				box-shadow: 1px 1px 5px #888888;
+				cursor: pointer;
+			}
+
+			.main-scr-home-add-domain-btn:hover {
+				background-color: $light-blue-hov;
+			}
+		}
+	}
+}
+
+.formTable {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	background-color: rgba(59,73,113, 0.8);
+
+	.close-modal-div {
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		z-index: -1;
+	}
+
+	.form {
+		background-color: $white;
+		width: 40%;
+		height: 80%;
+		margin: auto;
+		border-radius: 5px;
+		text-align: center;
+
+		.close-modal-btn {
+			background-color: white;
+			border: none;
+			border-radius: 5px;
+			float: right;
+			padding: 0.5em 0.7em;
+			font-size: 1.2em;
+			cursor: pointer;
+		}
+
+		.modal-text {
+			font-size: 2em;
+			padding: 2em 0 2em 1em;
+			text-align: center;
+		}
+
+		.textarea {
+			border-radius: 5px;
+			resize: none;
+			background-color: #f7f6f8;
+			width: 70%;
+			// height: 50vh;
+			margin: auto;
+			display: inline-block;
+			padding: 15px 0 0 20px;
+			font-size: 2em;
+    		line-height: 1.5em;
+		}
+
+		.submitButton {
+			background-color: $light-blue;
+			color: $white;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 1px 1px 5px #888888;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			width: 74%;
+			line-height: 1.7em;
+			cursor: pointer;
+		}
+
+		.textarea-placeholder {
+			position: absolute;
+		    left: 50%;
+		    top: 40%;
+		    font-size: 1.2em;
+		    color: gray;
+		    margin-left: -100px
+		}
+
+		.input-form {
+			position: relative;
+		}
+	}
+}
